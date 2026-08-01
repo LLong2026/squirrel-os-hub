@@ -121,6 +121,30 @@ No fallback to non-PQC schemes is permitted under the Constitution.
 - **Kill switch** — global and per-app, cannot be disabled by the system itself
 - **Audit trail** — hash-chained event logs with 7-year retention
 
+## Documentation Index
+
+### Architecture (`docs/architecture/`)
+- **RSI_Whitepaper_JasperOS_SquirrelOS_UniversalBridge** (PDF) — Recursive Self-Improvement in Settlement Operating Systems: Deterministic Routing, Solvency Invariants, and Mesh-Level Propagation. DOI: [10.5281/zenodo.21748182](https://doi.org/10.5281/zenodo.21748182)
+- **WHITEPAPER_Agentic_Orchestration_Architecture** — 15-chapter formal architecture (896 lines)
+- **SQUIRREL_OS_CONSTITUTION** — 12-article governance framework
+- **SQUIRREL_OS_AI_SAFETY_ASSESSMENT** — STRIDE threat model + safety properties
+- **SQUIRREL_OS_v2_PLATFORM_AGNOSTIC_ARCHITECTURE** — multi-cloud, multi-OS adapter design
+- **Neural_Mesh_Architecture_Formal_Doc** — 50K-node layered topology specification
+- **Ecosystem_Architecture_Four_Minds_One_System** — Jasper, Amelia, Gabriel, Gillian
+- **ARETE_ARCHITECTURE_V2** — recursive self-learning mesh
+- **RWA_Satoshi_Magma_Engine_Report** — Taproot tweaking + OP_Return inscribing
+- **SQUIRREL_OS_HUB_PLATFORM** — hub-and-spoke mission control design
+- **IDENTITY_ISOLATION_GUIDE** — tenant isolation and identity hardening
+
+### Benchmarks (`docs/benchmarks/`)
+- **BENCHMARK_REPORT_ISO20022_Neural_Mesh** — single-node performance
+- **BENCHMARK_REPORT_2_50App_Scan** — 50-app cross-ecosystem scan
+- **BENCHMARK_REPORT_Recorded_Events** — 7-day healing window
+
+### Patents (`docs/patents/`)
+- **PATENT_PORTFOLIO** — 7 patents pending + 5 SBIR tracks
+- **Provisional_Patent_Neural_Mesh_Governed_Computation** — neural mesh = mathematical manifold
+
 ## SBIR Alignment
 
 Squirrel OS aligns with federal research priorities across:
