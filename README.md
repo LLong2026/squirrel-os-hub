@@ -124,6 +124,7 @@ No fallback to non-PQC schemes is permitted under the Constitution.
 ## Documentation Index
 
 ### Architecture (`docs/architecture/`)
+- **Gabriel_Archangel_Ecosystem_Orchestrator_Architecture** — Formal architecture description of Gabriel as archangel-class ecosystem orchestrator (16 chapters, 7 formal invariants)
 - **RSI_Whitepaper_JasperOS_SquirrelOS_UniversalBridge** (PDF) — Recursive Self-Improvement in Settlement Operating Systems: Deterministic Routing, Solvency Invariants, and Mesh-Level Propagation. DOI: [10.5281/zenodo.21748182](https://doi.org/10.5281/zenodo.21748182)
 - **WHITEPAPER_Agentic_Orchestration_Architecture** — 15-chapter formal architecture (896 lines)
 - **SQUIRREL_OS_CONSTITUTION** — 12-article governance framework
