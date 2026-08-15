@@ -70,7 +70,7 @@ Each deployed app received:
 ### Tier 5: Additional Deployed (9 apps)
 | App | ID |
 |-----|-----|
-| Squirrel OS Hub | 6a665f6c6393f313f8e82371 |
+| Squirl OS HUB | 6a808941d814c3b78df5db52 |
 | Jasper OS - TAZ Edition | 6a62ec341d4646c37d11b92f |
 | Jasper OS - Squirl | 6a247e79e0a6160ec2b5c487 |
 | Arete Neural Mesh | 690d48d0c4c52840fa91a429 |
