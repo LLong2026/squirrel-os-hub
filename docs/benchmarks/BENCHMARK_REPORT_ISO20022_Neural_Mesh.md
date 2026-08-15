@@ -248,7 +248,7 @@ The convergence of these three patents in a single live deployment — a self-he
 | Tier | Price | Features |
 |------|------|----------|
 | Free | $0 | Healing playbooks + heartbeat monitoring only |
-| Licensed | $25,000 (one-time) | Full neural mesh + PQC + cross-app monitor |
+| Licensed | $25,000 (one-time)¹ | Full neural mesh + PQC + cross-app monitor |
 | SaaS | $2,500/month | Hosted hub, customers connect apps, subscription billing |
 
 ### 7.2 Target Markets
@@ -311,3 +311,5 @@ For the financial industry, this deployment demonstrates that self-healing, quan
 ---
 
 *This benchmark document is submitted as technical evidence for Patent Application 19/693,343 and supports SBIR program applications under NIST NCCoE, NSF, DOE, and DoD.*
+
+> ¹ **Prototype license — not production warranty. License to USE patents, NOT ownership. Buyer completes production hardening.**

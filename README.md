@@ -78,8 +78,10 @@ This software is **source-available** — publicly visible for review and evalua
 | Tier | Price | Features |
 |------|-------|----------|
 | **Free** | $0 | 11 healing playbooks, heartbeat monitoring |
-| **Licensed** | $25,000 one-time | Full 402-playbook library, 4 platform adapters, Constitution, AI safety stack |
+| **Licensed** | $25,000 one-time¹ | Full 402-playbook library, 4 platform adapters, Constitution, AI safety stack |
 | **SaaS** | $2,500/month | Hosted monitoring, managed healing, cross-app supervision, kill switch |
+
+> **Prototype package — starting point to learn from and build on. Licensed tier grants USE rights to 7 patents pending + 5 SBIR tracks, NOT ownership. Buyer completes production hardening.**
 
 **Contact:** leonlong.research@gmail.com
 

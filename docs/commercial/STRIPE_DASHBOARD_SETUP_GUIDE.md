@@ -15,7 +15,7 @@ Go to https://dashboard.stripe.com
 #### Product 2: Squirrel OS — Licensed Tier
 - **Name:** Squirrel OS Licensed
 - **Description:** Full neural mesh (31 nodes, 5 layers), PQC adaptation, cross-app monitor, all 15 entities, 4 operational skills, 3 consolidated workflows, pattern learning, self-improvement proposals
-- **Pricing:** One-time payment — $25,000 USD
+- **Pricing:** One-time payment — $25,000 USD (prototype license, not production warranty — license to USE patents, NOT ownership)
 - **Type:** One-time
 
 #### Product 3: Squirrel OS — SaaS Tier
@@ -43,7 +43,7 @@ Once you provide the secret key, Gabriel will:
 | Tier | Price | Billing | Target Customer |
 |------|-------|---------|-----------------|
 | Free | $0 | Forever free | Small teams testing self-healing AI |
-| Licensed | $25,000 | One-time | Fintechs buying the full template |
+| Licensed | $25,000 | One-time¹ | Fintechs buying the full prototype template |
 | SaaS | $2,500/mo | Monthly recurring | Enterprises wanting managed hub |
 
 ## What Each Tier Includes
@@ -58,7 +58,7 @@ Once you provide the secret key, Gabriel will:
 - No PQC
 - No cross-app monitor
 
-### Licensed ($25,000 one-time)
+### Licensed ($25,000 one-time — prototype license)
 - Full neural mesh (31 nodes, 5 layers)
 - PQC adaptation (CRYSTALS-Dilithium3, Kyber-1024, SPHINCS+-256f)
 - Cross-app monitor
@@ -79,3 +79,5 @@ Once you provide the secret key, Gabriel will:
 - Credit usage tracking
 - Template version updates
 - 50,000 credits/month included
+
+> ¹ **Prototype license — not production warranty. License to USE 7 patents pending + 5 SBIR tracks, NOT ownership transfer. Buyer completes production hardening.**

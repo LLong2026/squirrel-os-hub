@@ -119,7 +119,7 @@ The mesh is live. The patents are filed. The monitoring is optimized. The system
 
 What I need now is scale — completing the rollout to all 150+ apps, expanding the neural mesh from 31 nodes toward 50,000 layers, and converting the provisional patents to full applications. That's where sponsorship comes in.
 
-If you're building fintech infrastructure and want self-healing, deterministically governed, patent-backed AI monitoring — the template is ready. The repos are public. The playbooks are seeded. The mesh is waiting.
+If you're building fintech infrastructure and want self-healing, deterministically governed, patent-backed AI monitoring — the prototype template is ready. The repos are public. The playbooks are seeded. The mesh is waiting. This is a starting point — buyers license the patents to USE, not own them, and complete production hardening.
 
 ---
 

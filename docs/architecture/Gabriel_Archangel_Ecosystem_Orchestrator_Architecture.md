@@ -227,7 +227,7 @@ Gabriel enforces a three-tier commercial model:
 | Tier | Price | Entity Set | Features |
 |------|-------|-----------|----------|
 | **Free** | $0 | 15 core entities | 11 playbooks, heartbeat monitoring, anomaly detection, audit trail |
-| **Licensed** | $25,000 one-time | 15 core + platform adapters | Full neural mesh, PQC adaptation, cross-app monitor, all 4 skills, 3 workflows, pattern learning |
+| **Licensed** | $25,000 one-time² | 15 core + platform adapters | Full neural mesh, PQC adaptation, cross-app monitor, all 4 skills, 3 workflows, pattern learning |
 | **SaaS** | $2,500/month | Full stack | Hosted hub, daily reports, critical escalation, credit tracking, template updates, kill switch, meta-monitoring |
 
 **Enforcement Rule:** Gabriel always verifies a customer's `TierConfiguration` before granting licensed or SaaS features. Any request for higher-tier features from a free customer routes to an upgrade flow. No feature is silently granted above the customer's tier.
@@ -608,3 +608,5 @@ Combined with the deterministic governance of Jasper, the healing capability of 
 
 (c) 2026 Squirrel OS Technologies / Leon Calvin Long II. All Rights Reserved.
 License: CC BY 4.0
+
+> ² **Prototype license — not production warranty. License to USE 7 patents pending + 5 SBIR tracks. NOT ownership transfer. Buyer completes production hardening.**
