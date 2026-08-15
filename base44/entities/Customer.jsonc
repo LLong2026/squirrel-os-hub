@@ -1,0 +1,57 @@
+{
+  "name": "Customer",
+  "type": "object",
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "title": "Company Name"
+    },
+    "admin_name": {
+      "type": "string",
+      "title": "Admin Name"
+    },
+    "admin_email": {
+      "type": "string",
+      "title": "Admin Email"
+    },
+    "tier": {
+      "type": "string",
+      "title": "Tier",
+      "enum": [
+        "free",
+        "licensed",
+        "saas"
+      ],
+      "default": "free"
+    },
+    "billing_status": {
+      "type": "string",
+      "title": "Billing Status",
+      "enum": [
+        "active",
+        "past_due",
+        "suspended",
+        "trial"
+      ],
+      "default": "active"
+    },
+    "connected_app_count": {
+      "type": "number",
+      "title": "Connected App Count",
+      "default": 0
+    },
+    "credit_allotment": {
+      "type": "number",
+      "title": "Credit Allotment",
+      "default": 0
+    },
+    "credit_used": {
+      "type": "number",
+      "title": "Credit Used",
+      "default": 0
+    }
+  },
+  "required": [
+    "company_name"
+  ]
+}

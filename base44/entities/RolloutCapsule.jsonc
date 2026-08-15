@@ -1,0 +1,57 @@
+{
+  "name": "RolloutCapsule",
+  "type": "object",
+  "properties": {
+    "model_version_id": {
+      "type": "string",
+      "title": "Model Version ID"
+    },
+    "model_name": {
+      "type": "string",
+      "title": "Model Name"
+    },
+    "canary_pct": {
+      "type": "number",
+      "title": "Canary %",
+      "default": 10
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "draft",
+        "deploying",
+        "live",
+        "rolled_back",
+        "promoted"
+      ],
+      "default": "draft"
+    },
+    "target_metric": {
+      "type": "string",
+      "title": "Target Metric",
+      "default": "accuracy"
+    },
+    "target_value": {
+      "type": "number",
+      "title": "Target Value",
+      "default": 0.95
+    },
+    "current_metric": {
+      "type": "number",
+      "title": "Current Metric",
+      "default": 0
+    },
+    "cycle_id": {
+      "type": "string",
+      "title": "Cycle ID"
+    },
+    "promoted_at": {
+      "type": "string",
+      "title": "Promoted At"
+    }
+  },
+  "required": [
+    "model_version_id"
+  ]
+}

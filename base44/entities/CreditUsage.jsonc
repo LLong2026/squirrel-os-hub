@@ -1,0 +1,37 @@
+{
+  "name": "CreditUsage",
+  "type": "object",
+  "properties": {
+    "customer_id": {
+      "type": "string",
+      "title": "Customer ID"
+    },
+    "period": {
+      "type": "string",
+      "title": "Period"
+    },
+    "credits_used": {
+      "type": "number",
+      "title": "Credits Used",
+      "default": 0
+    },
+    "credits_allotted": {
+      "type": "number",
+      "title": "Credits Allotted",
+      "default": 0
+    },
+    "overage": {
+      "type": "number",
+      "title": "Overage",
+      "default": 0
+    },
+    "tier": {
+      "type": "string",
+      "title": "Tier",
+      "default": "free"
+    }
+  },
+  "required": [
+    "customer_id"
+  ]
+}

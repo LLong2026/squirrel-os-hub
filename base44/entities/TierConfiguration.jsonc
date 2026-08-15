@@ -1,0 +1,51 @@
+{
+  "name": "TierConfiguration",
+  "type": "object",
+  "properties": {
+    "tier_name": {
+      "type": "string",
+      "title": "Tier Name",
+      "enum": [
+        "free",
+        "licensed",
+        "saas"
+      ],
+      "default": "free"
+    },
+    "features": {
+      "type": "array",
+      "title": "Features",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "price": {
+      "type": "string",
+      "title": "Price"
+    },
+    "neural_mesh_enabled": {
+      "type": "boolean",
+      "title": "Neural Mesh Enabled",
+      "default": false
+    },
+    "pqc_enabled": {
+      "type": "boolean",
+      "title": "PQC Enabled",
+      "default": false
+    },
+    "cross_app_monitor_enabled": {
+      "type": "boolean",
+      "title": "Cross-App Monitor Enabled",
+      "default": false
+    },
+    "credit_allotment": {
+      "type": "number",
+      "title": "Credit Allotment",
+      "default": 0
+    }
+  },
+  "required": [
+    "tier_name"
+  ]
+}

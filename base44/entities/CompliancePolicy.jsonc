@@ -1,0 +1,67 @@
+{
+  "name": "CompliancePolicy",
+  "type": "object",
+  "properties": {
+    "policy_id": {
+      "type": "string",
+      "title": "Policy ID"
+    },
+    "title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "article_number": {
+      "type": "number",
+      "title": "Constitution Article #"
+    },
+    "category": {
+      "type": "string",
+      "title": "Category",
+      "enum": [
+        "pqc",
+        "kill_switch",
+        "audit",
+        "tenant_isolation",
+        "neural_safety",
+        "governance",
+        "incident_response",
+        "data_sovereignty"
+      ],
+      "default": "pqc"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "enforcement_level": {
+      "type": "string",
+      "title": "Enforcement Level",
+      "enum": [
+        "mandatory",
+        "recommended",
+        "advisory"
+      ],
+      "default": "mandatory"
+    },
+    "verification_method": {
+      "type": "string",
+      "title": "Verification Method",
+      "default": "automated"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "active",
+        "draft",
+        "deprecated"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "policy_id",
+    "title",
+    "category"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "name": "RateLimitLog",
+  "type": "object",
+  "properties": {
+    "scope": {
+      "type": "string",
+      "title": "Scope",
+      "enum": [
+        "per_app",
+        "global"
+      ],
+      "default": "per_app"
+    },
+    "app_id": {
+      "type": "string",
+      "title": "App ID"
+    },
+    "action_count_hour": {
+      "type": "number",
+      "title": "Actions This Hour",
+      "default": 0
+    },
+    "action_count_day": {
+      "type": "number",
+      "title": "Actions Today",
+      "default": 0
+    },
+    "hourly_limit": {
+      "type": "number",
+      "title": "Hourly Limit",
+      "default": 20
+    },
+    "daily_limit": {
+      "type": "number",
+      "title": "Daily Limit",
+      "default": 100
+    },
+    "global_hourly_limit": {
+      "type": "number",
+      "title": "Global Hourly Limit",
+      "default": 200
+    },
+    "global_daily_limit": {
+      "type": "number",
+      "title": "Global Daily Limit",
+      "default": 1000
+    },
+    "exceeded": {
+      "type": "boolean",
+      "title": "Exceeded",
+      "default": false
+    },
+    "alert_created": {
+      "type": "boolean",
+      "title": "Alert Created",
+      "default": false
+    },
+    "breaker_tripped": {
+      "type": "boolean",
+      "title": "Breaker Tripped",
+      "default": false
+    },
+    "timestamp": {
+      "type": "string",
+      "title": "Timestamp"
+    }
+  },
+  "required": [
+    "scope"
+  ]
+}

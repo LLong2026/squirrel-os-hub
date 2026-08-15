@@ -1,0 +1,65 @@
+{
+  "name": "KnowledgeArtifact",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "domain": {
+      "type": "string",
+      "title": "Domain",
+      "enum": [
+        "software_repair",
+        "ai",
+        "generative",
+        "infrastructure",
+        "security",
+        "devops",
+        "data",
+        "ml_ops",
+        "qa",
+        "research"
+      ],
+      "default": "ai"
+    },
+    "content": {
+      "type": "string",
+      "title": "Content"
+    },
+    "source_url": {
+      "type": "string",
+      "title": "Source URL"
+    },
+    "version": {
+      "type": "string",
+      "title": "Version",
+      "default": "1.0.0"
+    },
+    "embedding_status": {
+      "type": "string",
+      "title": "Embedding Status",
+      "enum": [
+        "pending",
+        "indexed",
+        "stale",
+        "archived"
+      ],
+      "default": "pending"
+    },
+    "quality_score": {
+      "type": "number",
+      "title": "Quality Score",
+      "default": 0
+    },
+    "ingested_by": {
+      "type": "string",
+      "title": "Ingested By",
+      "default": "arete"
+    }
+  },
+  "required": [
+    "title",
+    "domain"
+  ]
+}

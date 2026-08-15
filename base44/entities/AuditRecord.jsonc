@@ -1,0 +1,52 @@
+{
+  "name": "AuditRecord",
+  "type": "object",
+  "properties": {
+    "record_type": {
+      "type": "string",
+      "title": "Record Type",
+      "enum": [
+        "event",
+        "decision",
+        "model",
+        "promotion",
+        "safety",
+        "cycle"
+      ],
+      "default": "event"
+    },
+    "entity_id": {
+      "type": "string",
+      "title": "Entity ID"
+    },
+    "entity_type": {
+      "type": "string",
+      "title": "Entity Type"
+    },
+    "payload_hash": {
+      "type": "string",
+      "title": "Payload Hash"
+    },
+    "merkle_leaf": {
+      "type": "string",
+      "title": "Merkle Leaf"
+    },
+    "previous_hash": {
+      "type": "string",
+      "title": "Previous Hash"
+    },
+    "summary": {
+      "type": "string",
+      "title": "Summary"
+    },
+    "actor": {
+      "type": "string",
+      "title": "Actor",
+      "default": "arete"
+    }
+  },
+  "required": [
+    "record_type",
+    "merkle_leaf"
+  ]
+}

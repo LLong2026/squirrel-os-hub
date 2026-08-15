@@ -1,0 +1,96 @@
+{
+  "name": "ModelVersion",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name"
+    },
+    "version": {
+      "type": "string",
+      "title": "Version"
+    },
+    "domain": {
+      "type": "string",
+      "title": "Domain",
+      "enum": [
+        "software_repair",
+        "ai",
+        "generative",
+        "infrastructure",
+        "security",
+        "devops",
+        "data",
+        "ml_ops",
+        "qa",
+        "research"
+      ],
+      "default": "ai"
+    },
+    "model_type": {
+      "type": "string",
+      "title": "Model Type",
+      "enum": [
+        "policy",
+        "embedding",
+        "classifier",
+        "generator",
+        "reward_model",
+        "safety_validator"
+      ],
+      "default": "policy"
+    },
+    "dataset_hash": {
+      "type": "string",
+      "title": "Dataset Hash"
+    },
+    "artifact_metadata": {
+      "type": "string",
+      "title": "Artifact Metadata"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "candidate",
+        "canary",
+        "live",
+        "archived",
+        "rollback"
+      ],
+      "default": "candidate"
+    },
+    "canary_pct": {
+      "type": "number",
+      "title": "Canary %",
+      "default": 0
+    },
+    "performance_score": {
+      "type": "number",
+      "title": "Performance Score",
+      "default": 0
+    },
+    "accuracy_delta": {
+      "type": "number",
+      "title": "Accuracy Delta",
+      "default": 0
+    },
+    "trained_at": {
+      "type": "string",
+      "title": "Trained At"
+    },
+    "promoted_at": {
+      "type": "string",
+      "title": "Promoted At"
+    },
+    "cycle_id": {
+      "type": "string",
+      "title": "Cycle ID"
+    }
+  },
+  "required": [
+    "name",
+    "version",
+    "domain"
+  ]
+}

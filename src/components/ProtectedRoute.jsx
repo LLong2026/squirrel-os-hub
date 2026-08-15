@@ -1,30 +1,39 @@
-import { Outlet } from 'react-router-dom';
-import { useAuth } from '@/lib/AuthContext';
-import UserNotRegisteredError from '@/components/UserNotRegisteredError';
+import { useEffect, useState } from "react";
+import { base44 } from "@/api/base44Client";
 
-const DefaultFallback = () => (
-  <div className="fixed inset-0 flex items-center justify-center">
-    <div className="w-8 h-8 border-4 border-slate-200 border-t-slate-800 rounded-full animate-spin"></div>
-  </div>
-);
+function FullScreenLoader({ label = "Initializing Squirrel OS Hub..." }) {
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-background">
+      <div className="h-10 w-10 animate-spin rounded-full border-2 border-primary border-t-transparent" />
+      <p className="font-mono text-sm text-muted-foreground">{label}</p>
+    </div>
+  );
+}
 
-export default function ProtectedRoute({ fallback = <DefaultFallback />, unauthenticatedElement }) {
-  const { isAuthenticated, isLoadingAuth, authError } = useAuth();
+export default function ProtectedRoute({ children }) {
+  const [status, setStatus] = useState("checking");
 
-  if (isLoadingAuth) {
-    return fallback;
-  }
+  useEffect(() => {
+    let mounted = true;
+    base44.auth
+      .isAuthenticated()
+      .then((ok) => mounted && setStatus(ok ? "authed" : "guest"))
+      .catch(() => mounted && setStatus("guest"));
+    return () => {
+      mounted = false;
+    };
+  }, []);
 
-  if (authError) {
-    if (authError.type === 'user_not_registered') {
-      return <UserNotRegisteredError />;
+  if (status === "checking") return <FullScreenLoader />;
+
+  if (status === "guest") {
+    try {
+      base44.auth.redirectToLogin?.(window.location.pathname);
+    } catch (_) {
+      /* no-op */
     }
-    return unauthenticatedElement;
+    return <FullScreenLoader label="Redirecting to sign in..." />;
   }
 
-  if (!isAuthenticated) {
-    return unauthenticatedElement;
-  }
-
-  return <Outlet />;
+  return children;
 }

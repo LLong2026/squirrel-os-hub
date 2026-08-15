@@ -1,0 +1,64 @@
+{
+  "name": "OptimizationProposal",
+  "type": "object",
+  "properties": {
+    "agent_id": {
+      "type": "string",
+      "title": "Agent ID"
+    },
+    "agent_name": {
+      "type": "string",
+      "title": "Agent Name"
+    },
+    "area": {
+      "type": "string",
+      "title": "Area",
+      "enum": [
+        "system_prompt",
+        "capabilities",
+        "model_config",
+        "routing",
+        "cost_reduction"
+      ],
+      "default": "system_prompt"
+    },
+    "current_state": {
+      "type": "string",
+      "title": "Current State"
+    },
+    "proposed_optimization": {
+      "type": "string",
+      "title": "Proposed Optimization"
+    },
+    "reasoning": {
+      "type": "string",
+      "title": "Reasoning"
+    },
+    "confidence": {
+      "type": "number",
+      "title": "Confidence",
+      "default": 0
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected",
+        "applied",
+        "refined"
+      ],
+      "default": "pending"
+    },
+    "applied_at": {
+      "type": "string",
+      "title": "Applied At"
+    }
+  },
+  "required": [
+    "agent_id",
+    "area",
+    "proposed_optimization"
+  ]
+}

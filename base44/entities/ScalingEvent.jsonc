@@ -1,0 +1,101 @@
+{
+  "name": "ScalingEvent",
+  "type": "object",
+  "properties": {
+    "event_type": {
+      "type": "string",
+      "title": "Event Type",
+      "enum": [
+        "scale_up",
+        "scale_down",
+        "alert",
+        "prediction"
+      ],
+      "default": "prediction"
+    },
+    "node_id": {
+      "type": "string",
+      "title": "Node ID"
+    },
+    "node_name": {
+      "type": "string",
+      "title": "Node Name"
+    },
+    "current_cpu": {
+      "type": "number",
+      "title": "Current CPU %",
+      "default": 0
+    },
+    "current_gpu": {
+      "type": "number",
+      "title": "Current GPU %",
+      "default": 0
+    },
+    "current_ram": {
+      "type": "number",
+      "title": "Current RAM %",
+      "default": 0
+    },
+    "active_agents": {
+      "type": "number",
+      "title": "Active Agents",
+      "default": 0
+    },
+    "task_queue_length": {
+      "type": "number",
+      "title": "Task Queue Length",
+      "default": 0
+    },
+    "predicted_demand": {
+      "type": "string",
+      "title": "Predicted Demand"
+    },
+    "scaling_action": {
+      "type": "string",
+      "title": "Scaling Action"
+    },
+    "action_trigger": {
+      "type": "string",
+      "title": "Action Trigger",
+      "enum": [
+        "auto",
+        "manual",
+        "alert"
+      ],
+      "default": "auto"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "pending",
+        "executing",
+        "completed",
+        "cancelled"
+      ],
+      "default": "completed"
+    },
+    "timestamp": {
+      "type": "string",
+      "title": "Timestamp"
+    },
+    "cost_impact": {
+      "type": "number",
+      "title": "Cost Impact",
+      "default": 0
+    },
+    "reason": {
+      "type": "string",
+      "title": "Reason"
+    },
+    "confidence": {
+      "type": "number",
+      "title": "Confidence",
+      "default": 0
+    }
+  },
+  "required": [
+    "event_type",
+    "scaling_action"
+  ]
+}

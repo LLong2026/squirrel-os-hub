@@ -1,0 +1,75 @@
+{
+  "name": "LearningCycle",
+  "type": "object",
+  "properties": {
+    "cycle_number": {
+      "type": "number",
+      "title": "Cycle Number",
+      "default": 1
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "ingesting",
+        "training",
+        "validating",
+        "deploying",
+        "complete",
+        "failed"
+      ],
+      "default": "ingesting"
+    },
+    "phase": {
+      "type": "string",
+      "title": "Current Phase",
+      "enum": [
+        "ingest",
+        "event_mesh",
+        "feature_store",
+        "train",
+        "register",
+        "safety",
+        "rollout",
+        "promote",
+        "audit"
+      ],
+      "default": "ingest"
+    },
+    "events_processed": {
+      "type": "number",
+      "title": "Events Processed",
+      "default": 0
+    },
+    "models_trained": {
+      "type": "number",
+      "title": "Models Trained",
+      "default": 0
+    },
+    "safety_blocks": {
+      "type": "number",
+      "title": "Safety Blocks",
+      "default": 0
+    },
+    "accuracy_delta": {
+      "type": "number",
+      "title": "Accuracy Delta",
+      "default": 0
+    },
+    "started_at": {
+      "type": "string",
+      "title": "Started At"
+    },
+    "completed_at": {
+      "type": "string",
+      "title": "Completed At"
+    },
+    "summary": {
+      "type": "string",
+      "title": "Summary"
+    }
+  },
+  "required": [
+    "cycle_number"
+  ]
+}

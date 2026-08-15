@@ -1,0 +1,35 @@
+{
+  "name": "PlaybookTemplate",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "title": "Code"
+    },
+    "name": {
+      "type": "string",
+      "title": "Name"
+    },
+    "anomaly_type": {
+      "type": "string",
+      "title": "Anomaly Type"
+    },
+    "confidence_threshold": {
+      "type": "number",
+      "title": "Confidence Threshold",
+      "default": 0
+    },
+    "trigger_condition": {
+      "type": "string",
+      "title": "Trigger Condition"
+    },
+    "version": {
+      "type": "string",
+      "title": "Version"
+    }
+  },
+  "required": [
+    "code",
+    "name"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "name": "DeploymentJob",
+  "type": "object",
+  "properties": {
+    "customer_id": {
+      "type": "string",
+      "title": "Customer ID"
+    },
+    "app_id": {
+      "type": "string",
+      "title": "App ID"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "pending_approval",
+        "in_progress",
+        "complete",
+        "failed"
+      ],
+      "default": "pending_approval"
+    },
+    "entities_deployed": {
+      "type": "number",
+      "title": "Entities Deployed",
+      "default": 0
+    },
+    "functions_deployed": {
+      "type": "number",
+      "title": "Functions Deployed",
+      "default": 0
+    },
+    "playbooks_deployed": {
+      "type": "number",
+      "title": "Playbooks Deployed",
+      "default": 0
+    },
+    "skills_deployed": {
+      "type": "number",
+      "title": "Skills Deployed",
+      "default": 0
+    },
+    "neural_nodes_deployed": {
+      "type": "number",
+      "title": "Neural Nodes Deployed",
+      "default": 0
+    },
+    "pqc_enabled": {
+      "type": "boolean",
+      "title": "PQC Enabled",
+      "default": false
+    },
+    "error_log": {
+      "type": "string",
+      "title": "Error Log"
+    }
+  },
+  "required": [
+    "app_id"
+  ]
+}

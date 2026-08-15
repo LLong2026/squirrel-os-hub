@@ -1,0 +1,61 @@
+{
+  "name": "ConnectedApp",
+  "type": "object",
+  "properties": {
+    "customer_id": {
+      "type": "string",
+      "title": "Customer ID"
+    },
+    "app_id": {
+      "type": "string",
+      "title": "App ID"
+    },
+    "app_name": {
+      "type": "string",
+      "title": "App Name"
+    },
+    "health_score": {
+      "type": "number",
+      "title": "Health Score",
+      "default": 0
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "active",
+        "degraded",
+        "offline",
+        "deploying"
+      ],
+      "default": "active"
+    },
+    "deployment_status": {
+      "type": "string",
+      "title": "Deployment Status",
+      "enum": [
+        "pending",
+        "in_progress",
+        "complete",
+        "failed"
+      ],
+      "default": "complete"
+    },
+    "last_heartbeat": {
+      "type": "string",
+      "title": "Last Heartbeat"
+    },
+    "neural_mesh_node_count": {
+      "type": "number",
+      "title": "Neural Mesh Node Count",
+      "default": 0
+    },
+    "pqc_config": {
+      "type": "string",
+      "title": "PQC Config"
+    }
+  },
+  "required": [
+    "app_name"
+  ]
+}

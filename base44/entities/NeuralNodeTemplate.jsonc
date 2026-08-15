@@ -1,0 +1,39 @@
+{
+  "name": "NeuralNodeTemplate",
+  "type": "object",
+  "properties": {
+    "layer": {
+      "type": "number",
+      "title": "Layer"
+    },
+    "node_index": {
+      "type": "number",
+      "title": "Node Index"
+    },
+    "node_type": {
+      "type": "string",
+      "title": "Node Type"
+    },
+    "weight": {
+      "type": "number",
+      "title": "Weight",
+      "default": 0
+    },
+    "connections": {
+      "type": "array",
+      "title": "Connections",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "learning_rate": {
+      "type": "number",
+      "title": "Learning Rate",
+      "default": 0.01
+    }
+  },
+  "required": [
+    "node_type"
+  ]
+}

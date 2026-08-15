@@ -1,0 +1,70 @@
+{
+  "name": "CircuitBreaker",
+  "type": "object",
+  "properties": {
+    "breaker_name": {
+      "type": "string",
+      "title": "Breaker Name"
+    },
+    "scope": {
+      "type": "string",
+      "title": "Scope",
+      "enum": [
+        "per_adapter",
+        "global"
+      ],
+      "default": "per_adapter"
+    },
+    "adapter_name": {
+      "type": "string",
+      "title": "Adapter Name"
+    },
+    "state": {
+      "type": "string",
+      "title": "State",
+      "enum": [
+        "closed",
+        "open",
+        "half_open"
+      ],
+      "default": "closed"
+    },
+    "failure_count": {
+      "type": "number",
+      "title": "Failure Count",
+      "default": 0
+    },
+    "failure_threshold": {
+      "type": "number",
+      "title": "Failure Threshold",
+      "default": 3
+    },
+    "global_failure_threshold": {
+      "type": "number",
+      "title": "Global Failure Threshold",
+      "default": 10
+    },
+    "cooldown_minutes": {
+      "type": "number",
+      "title": "Cooldown (minutes)",
+      "default": 15
+    },
+    "global_cooldown_minutes": {
+      "type": "number",
+      "title": "Global Cooldown (minutes)",
+      "default": 30
+    },
+    "last_tripped_at": {
+      "type": "string",
+      "title": "Last Tripped At"
+    },
+    "last_reset_at": {
+      "type": "string",
+      "title": "Last Reset At"
+    }
+  },
+  "required": [
+    "breaker_name",
+    "scope"
+  ]
+}

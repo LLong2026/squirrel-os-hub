@@ -1,0 +1,48 @@
+{
+  "name": "HealingEventLog",
+  "type": "object",
+  "properties": {
+    "customer_id": {
+      "type": "string",
+      "title": "Customer ID"
+    },
+    "app_id": {
+      "type": "string",
+      "title": "App ID"
+    },
+    "playbook_id": {
+      "type": "string",
+      "title": "Playbook ID"
+    },
+    "anomaly_summary": {
+      "type": "string",
+      "title": "Anomaly Summary"
+    },
+    "action_taken": {
+      "type": "string",
+      "title": "Action Taken"
+    },
+    "success": {
+      "type": "boolean",
+      "title": "Success",
+      "default": true
+    },
+    "credits_used": {
+      "type": "number",
+      "title": "Credits Used",
+      "default": 0
+    },
+    "credits_saved": {
+      "type": "number",
+      "title": "Credits Saved",
+      "default": 0
+    },
+    "resolved_at": {
+      "type": "string",
+      "title": "Resolved At"
+    }
+  },
+  "required": [
+    "anomaly_summary"
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "name": "AIAgent",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name"
+    },
+    "domain": {
+      "type": "string",
+      "title": "Domain",
+      "enum": [
+        "orchestration",
+        "dispatch",
+        "scaling",
+        "knowledge",
+        "code",
+        "data",
+        "security",
+        "infrastructure",
+        "research",
+        "communication",
+        "finance",
+        "ml_ops",
+        "qa",
+        "devops",
+        "analytics"
+      ],
+      "default": "knowledge"
+    },
+    "agent_type": {
+      "type": "string",
+      "title": "Agent Type",
+      "enum": [
+        "master",
+        "sub_master",
+        "dispatcher",
+        "scaler",
+        "specialist",
+        "micro"
+      ],
+      "default": "specialist"
+    },
+    "specialty": {
+      "type": "string",
+      "title": "Specialty"
+    },
+    "system_prompt": {
+      "type": "string",
+      "title": "System Prompt"
+    },
+    "model": {
+      "type": "string",
+      "title": "Model",
+      "default": "automatic"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "active",
+        "idle",
+        "optimizing",
+        "offline",
+        "overloaded"
+      ],
+      "default": "active"
+    },
+    "node_id": {
+      "type": "string",
+      "title": "Node ID"
+    },
+    "success_rate": {
+      "type": "number",
+      "title": "Success Rate",
+      "default": 0
+    },
+    "avg_response_ms": {
+      "type": "number",
+      "title": "Avg Response (ms)",
+      "default": 0
+    },
+    "cost_per_task": {
+      "type": "number",
+      "title": "Cost Per Task",
+      "default": 0
+    },
+    "tasks_completed": {
+      "type": "number",
+      "title": "Tasks Completed",
+      "default": 0
+    },
+    "capabilities": {
+      "type": "array",
+      "title": "Capabilities",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "version": {
+      "type": "string",
+      "title": "Version",
+      "default": "1.0.0"
+    },
+    "auto_optimize": {
+      "type": "boolean",
+      "title": "Auto Optimize",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "domain",
+    "agent_type"
+  ]
+}

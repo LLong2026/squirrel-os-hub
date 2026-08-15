@@ -1,0 +1,41 @@
+{
+  "name": "HealthManifest",
+  "type": "object",
+  "properties": {
+    "customer_id": {
+      "type": "string",
+      "title": "Customer ID"
+    },
+    "app_id": {
+      "type": "string",
+      "title": "App ID"
+    },
+    "health_score": {
+      "type": "number",
+      "title": "Health Score",
+      "default": 0
+    },
+    "heartbeat_status": {
+      "type": "string",
+      "title": "Heartbeat Status",
+      "default": "alive"
+    },
+    "latency_ms": {
+      "type": "number",
+      "title": "Latency (ms)",
+      "default": 0
+    },
+    "token_usage": {
+      "type": "number",
+      "title": "Token Usage",
+      "default": 0
+    },
+    "generated_at": {
+      "type": "string",
+      "title": "Generated At"
+    }
+  },
+  "required": [
+    "app_id"
+  ]
+}

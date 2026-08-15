@@ -1,0 +1,47 @@
+{
+  "name": "MetaMonitor",
+  "type": "object",
+  "properties": {
+    "metric_name": {
+      "type": "string",
+      "title": "Metric Name"
+    },
+    "metric_value": {
+      "type": "number",
+      "title": "Current Value",
+      "default": 0
+    },
+    "target_value": {
+      "type": "number",
+      "title": "Target Value",
+      "default": 0
+    },
+    "unit": {
+      "type": "string",
+      "title": "Unit",
+      "default": "%"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "healthy",
+        "warning",
+        "critical"
+      ],
+      "default": "healthy"
+    },
+    "alert_created": {
+      "type": "boolean",
+      "title": "Alert Created",
+      "default": false
+    },
+    "last_checked": {
+      "type": "string",
+      "title": "Last Checked"
+    }
+  },
+  "required": [
+    "metric_name"
+  ]
+}

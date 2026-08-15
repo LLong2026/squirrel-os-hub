@@ -1,0 +1,35 @@
+{
+  "name": "NeuralMeshSnapshot",
+  "type": "object",
+  "properties": {
+    "app_id": {
+      "type": "string",
+      "title": "App ID"
+    },
+    "customer_id": {
+      "type": "string",
+      "title": "Customer ID"
+    },
+    "node_count": {
+      "type": "number",
+      "title": "Node Count",
+      "default": 0
+    },
+    "layer_count": {
+      "type": "number",
+      "title": "Layer Count",
+      "default": 0
+    },
+    "topology_json": {
+      "type": "string",
+      "title": "Topology JSON"
+    },
+    "captured_at": {
+      "type": "string",
+      "title": "Captured At"
+    }
+  },
+  "required": [
+    "app_id"
+  ]
+}

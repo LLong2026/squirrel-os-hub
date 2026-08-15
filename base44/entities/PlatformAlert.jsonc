@@ -1,0 +1,51 @@
+{
+  "name": "PlatformAlert",
+  "type": "object",
+  "properties": {
+    "customer_id": {
+      "type": "string",
+      "title": "Customer ID"
+    },
+    "app_id": {
+      "type": "string",
+      "title": "App ID"
+    },
+    "alert_type": {
+      "type": "string",
+      "title": "Alert Type",
+      "enum": [
+        "health_drop",
+        "deploy_fail",
+        "credit_overage",
+        "heartbeat_miss"
+      ],
+      "default": "health_drop"
+    },
+    "severity": {
+      "type": "string",
+      "title": "Severity",
+      "enum": [
+        "info",
+        "warning",
+        "critical"
+      ],
+      "default": "info"
+    },
+    "message": {
+      "type": "string",
+      "title": "Message"
+    },
+    "escalated_to_gabriel": {
+      "type": "boolean",
+      "title": "Escalated to Gabriel",
+      "default": false
+    },
+    "resolved_at": {
+      "type": "string",
+      "title": "Resolved At"
+    }
+  },
+  "required": [
+    "message"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "name": "SafetyCheck",
+  "type": "object",
+  "properties": {
+    "target_type": {
+      "type": "string",
+      "title": "Target Type",
+      "enum": [
+        "decision",
+        "model",
+        "agent",
+        "deployment"
+      ],
+      "default": "model"
+    },
+    "target_id": {
+      "type": "string",
+      "title": "Target ID"
+    },
+    "target_name": {
+      "type": "string",
+      "title": "Target Name"
+    },
+    "validator_name": {
+      "type": "string",
+      "title": "Validator Name",
+      "default": "safety_guard"
+    },
+    "verdict": {
+      "type": "string",
+      "title": "Verdict",
+      "enum": [
+        "pass",
+        "warn",
+        "block"
+      ],
+      "default": "pass"
+    },
+    "risk_level": {
+      "type": "number",
+      "title": "Risk Level (0-1)",
+      "default": 0
+    },
+    "reason": {
+      "type": "string",
+      "title": "Reason"
+    },
+    "recommendations": {
+      "type": "string",
+      "title": "Recommendations"
+    }
+  },
+  "required": [
+    "target_type",
+    "verdict"
+  ]
+}

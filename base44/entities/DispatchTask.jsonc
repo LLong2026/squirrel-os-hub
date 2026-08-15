@@ -1,0 +1,102 @@
+{
+  "name": "DispatchTask",
+  "type": "object",
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "title": "Task ID"
+    },
+    "title": {
+      "type": "string",
+      "title": "Title"
+    },
+    "task_type": {
+      "type": "string",
+      "title": "Task Type",
+      "enum": [
+        "analysis",
+        "generation",
+        "transformation",
+        "monitoring",
+        "scaling",
+        "code",
+        "data",
+        "research",
+        "orchestration",
+        "qa"
+      ],
+      "default": "analysis"
+    },
+    "priority": {
+      "type": "string",
+      "title": "Priority",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "default": "medium"
+    },
+    "input_data": {
+      "type": "string",
+      "title": "Input Data"
+    },
+    "dependencies": {
+      "type": "string",
+      "title": "Dependencies"
+    },
+    "assigned_agent_id": {
+      "type": "string",
+      "title": "Assigned Agent ID"
+    },
+    "assigned_agent_name": {
+      "type": "string",
+      "title": "Assigned Agent Name"
+    },
+    "dispatch_reason": {
+      "type": "string",
+      "title": "Dispatch Reason"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "queued",
+        "dispatched",
+        "in_progress",
+        "completed",
+        "failed",
+        "re-routed"
+      ],
+      "default": "queued"
+    },
+    "original_agent_id": {
+      "type": "string",
+      "title": "Original Agent ID"
+    },
+    "re_route_reason": {
+      "type": "string",
+      "title": "Re-Route Reason"
+    },
+    "dispatch_time_ms": {
+      "type": "number",
+      "title": "Dispatch Time (ms)",
+      "default": 0
+    },
+    "completion_time_ms": {
+      "type": "number",
+      "title": "Completion Time (ms)",
+      "default": 0
+    },
+    "cost": {
+      "type": "number",
+      "title": "Cost",
+      "default": 0
+    }
+  },
+  "required": [
+    "title",
+    "task_type"
+  ]
+}

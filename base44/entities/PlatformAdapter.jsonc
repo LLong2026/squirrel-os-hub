@@ -1,0 +1,87 @@
+{
+  "name": "PlatformAdapter",
+  "type": "object",
+  "properties": {
+    "adapter_name": {
+      "type": "string",
+      "title": "Adapter Name"
+    },
+    "platform": {
+      "type": "string",
+      "title": "Platform",
+      "enum": [
+        "microsoft",
+        "ios",
+        "windows",
+        "macos",
+        "linux",
+        "android"
+      ]
+    },
+    "platforms": {
+      "type": "string",
+      "title": "Platforms Covered"
+    },
+    "apis": {
+      "type": "string",
+      "title": "APIs"
+    },
+    "host": {
+      "type": "string",
+      "title": "Host",
+      "default": "Gabriel"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "deployed",
+        "deploying",
+        "offline"
+      ],
+      "default": "deployed"
+    },
+    "health_score": {
+      "type": "number",
+      "title": "Health Score",
+      "default": 100
+    },
+    "pqc_config": {
+      "type": "string",
+      "title": "PQC Config",
+      "default": "Dilithium3"
+    },
+    "version": {
+      "type": "string",
+      "title": "Version",
+      "default": "1.0.0"
+    },
+    "capabilities": {
+      "type": "string",
+      "title": "Capabilities"
+    },
+    "playbook_count": {
+      "type": "number",
+      "title": "Playbook Count",
+      "default": 0
+    },
+    "credentials_needed": {
+      "type": "string",
+      "title": "Credentials Needed"
+    },
+    "credential_status": {
+      "type": "string",
+      "title": "Credential Status",
+      "enum": [
+        "configured",
+        "pending",
+        "missing"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "adapter_name",
+    "platform"
+  ]
+}

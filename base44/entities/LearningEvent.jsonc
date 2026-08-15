@@ -1,0 +1,65 @@
+{
+  "name": "LearningEvent",
+  "type": "object",
+  "properties": {
+    "event_type": {
+      "type": "string",
+      "title": "Event Type",
+      "enum": [
+        "ingest",
+        "train",
+        "decide",
+        "deploy",
+        "feedback",
+        "anomaly"
+      ],
+      "default": "ingest"
+    },
+    "source": {
+      "type": "string",
+      "title": "Source",
+      "default": "api"
+    },
+    "domain": {
+      "type": "string",
+      "title": "Domain",
+      "enum": [
+        "software_repair",
+        "ai",
+        "generative",
+        "infrastructure",
+        "security",
+        "devops",
+        "data",
+        "ml_ops",
+        "qa",
+        "research"
+      ],
+      "default": "ai"
+    },
+    "payload": {
+      "type": "string",
+      "title": "Payload (JSON)"
+    },
+    "feature_hash": {
+      "type": "string",
+      "title": "Feature Hash"
+    },
+    "processed": {
+      "type": "boolean",
+      "title": "Processed",
+      "default": false
+    },
+    "processed_at": {
+      "type": "string",
+      "title": "Processed At"
+    },
+    "cycle_id": {
+      "type": "string",
+      "title": "Cycle ID"
+    }
+  },
+  "required": [
+    "event_type"
+  ]
+}

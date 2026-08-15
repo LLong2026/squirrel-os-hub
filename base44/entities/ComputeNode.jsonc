@@ -1,0 +1,64 @@
+{
+  "name": "ComputeNode",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name"
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "active",
+        "provisioning",
+        "idle",
+        "decommissioned"
+      ],
+      "default": "active"
+    },
+    "region": {
+      "type": "string",
+      "title": "Region",
+      "default": "us-east-1"
+    },
+    "cpu_usage": {
+      "type": "number",
+      "title": "CPU Usage %",
+      "default": 0
+    },
+    "gpu_usage": {
+      "type": "number",
+      "title": "GPU Usage %",
+      "default": 0
+    },
+    "ram_usage": {
+      "type": "number",
+      "title": "RAM Usage %",
+      "default": 0
+    },
+    "active_agents": {
+      "type": "number",
+      "title": "Active Agents",
+      "default": 0
+    },
+    "task_queue_length": {
+      "type": "number",
+      "title": "Task Queue Length",
+      "default": 0
+    },
+    "max_capacity": {
+      "type": "number",
+      "title": "Max Capacity",
+      "default": 100
+    },
+    "version": {
+      "type": "string",
+      "title": "Version",
+      "default": "argis-node-1.0"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

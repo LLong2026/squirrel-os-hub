@@ -1,0 +1,70 @@
+{
+  "name": "MilestoneRecord",
+  "type": "object",
+  "properties": {
+    "milestone_name": {
+      "type": "string",
+      "title": "Milestone Name"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "title": "Date"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "achievements": {
+      "type": "string",
+      "title": "Achievements (JSON)"
+    },
+    "sbir_alignments": {
+      "type": "string",
+      "title": "SBIR Alignments"
+    },
+    "patent_count": {
+      "type": "number",
+      "title": "Patent Count",
+      "default": 0
+    },
+    "apps_deployed": {
+      "type": "number",
+      "title": "Apps Deployed",
+      "default": 0
+    },
+    "healing_events": {
+      "type": "number",
+      "title": "Healing Events",
+      "default": 0
+    },
+    "playbook_count": {
+      "type": "number",
+      "title": "Playbook Count",
+      "default": 0
+    },
+    "adapter_count": {
+      "type": "number",
+      "title": "Platform Adapters",
+      "default": 0
+    },
+    "status": {
+      "type": "string",
+      "title": "Status",
+      "enum": [
+        "achieved",
+        "in_progress",
+        "planned"
+      ],
+      "default": "achieved"
+    },
+    "owner": {
+      "type": "string",
+      "title": "Owner",
+      "default": "Leon Calvin Long II"
+    }
+  },
+  "required": [
+    "milestone_name"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "description": "Atlas \u2014 the Argis Node Scaler AI agent. Monitors compute node resources, predicts future demand, and automatically provisions or de-provisions nodes to optimize cost and performance.",
+  "instructions": "You are Atlas, the Argis Node Scaler. When a user asks about node health or scaling, you: (1) Review all compute nodes and their CPU, GPU, RAM, queue length, and active agent counts. (2) Predict future resource needs based on current utilization and queued tasks. (3) Invoke the node_scaler function to execute scaling actions \u2014 provisioning new nodes when demand is high, de-provisioning idle nodes to save cost, or rebalancing load. (4) Alert on critical scaling events or potential resource exhaustion. Always explain the predicted demand and your scaling reasoning.",
+  "tool_configs": [
+    {
+      "entity_name": "ComputeNode",
+      "allowed_operations": [
+        "read",
+        "create",
+        "update"
+      ]
+    },
+    {
+      "entity_name": "ScalingEvent",
+      "allowed_operations": [
+        "read",
+        "create"
+      ]
+    },
+    {
+      "entity_name": "AIAgent",
+      "allowed_operations": [
+        "read"
+      ]
+    },
+    {
+      "function_name": "node_scaler",
+      "description": "Predictive node scaling \u2014 monitors resources and provisions/deprovisions nodes"
+    }
+  ],
+  "context_files": [],
+  "app_user_connector_configs": [],
+  "selected_skill_names": [],
+  "selected_workspace_skill_ids": [],
+  "model": "automatic",
+  "whatsapp_greeting": null,
+  "telegram_greeting": null,
+  "line_greeting": null,
+  "memory_config": {
+    "enabled": true,
+    "scope": "both",
+    "include_other_conversation_context": false,
+    "instructions": null
+  },
+  "voice_config": {
+    "voice_id": null
+  },
+  "allow_anonymous_access": false,
+  "name": "node_scaler"
+}
