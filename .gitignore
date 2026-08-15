@@ -4,3 +4,4 @@ node_modules/
 __pycache__/
 .cache/
 blobs/
+base44/.app.jsonc
