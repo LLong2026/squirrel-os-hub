@@ -8,6 +8,7 @@ import { Toaster } from "@/components/ui/toaster";
 import ScrollToTop from "@/components/ScrollToTop";
 import MissionLayout from "@/components/MissionLayout";
 import Dashboard from "@/pages/Dashboard";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 function FullScreenLoader({ label = "Initializing Squirrel OS Hub..." }) {
   return (
@@ -42,14 +43,16 @@ function AuthenticatedApp() {
 
 export default function App() {
   return (
-    <AuthProvider>
-      <QueryClientProvider client={queryClientInstance}>
-        <BrowserRouter>
-          <ScrollToTop />
-          <AuthenticatedApp />
-        </BrowserRouter>
-        <Toaster />
-      </QueryClientProvider>
-    </AuthProvider>
+    <ErrorBoundary>
+      <AuthProvider>
+        <QueryClientProvider client={queryClientInstance}>
+          <BrowserRouter>
+            <ScrollToTop />
+            <AuthenticatedApp />
+          </BrowserRouter>
+          <Toaster />
+        </QueryClientProvider>
+      </AuthProvider>
+    </ErrorBoundary>
   );
 }

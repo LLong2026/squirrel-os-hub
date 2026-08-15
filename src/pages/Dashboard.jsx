@@ -14,18 +14,27 @@ export default function Dashboard() {
 
   useEffect(() => {
     let mounted = true;
+    const safeList = (entityName, sort, limit) => {
+      try {
+        const ent = base44?.entities?.[entityName];
+        if (!ent || typeof ent.list !== "function") return Promise.resolve([]);
+        return Promise.resolve(ent.list(sort, limit)).catch(() => []);
+      } catch {
+        return Promise.resolve([]);
+      }
+    };
     (async () => {
       setLoading(true);
       const results = await Promise.allSettled([
-        base44.entities.ConnectedApp.list(null, 200),
-        base44.entities.HealingEventLog.list("-created_date", 300),
-        base44.entities.PlaybookTemplate.list(null, 500),
-        base44.entities.PlatformAdapter.list(null, 20),
-        base44.entities.ComputeNode.list(null, 100),
-        base44.entities.AIAgent.list(null, 200),
-        base44.entities.PlatformAlert.list("-created_date", 50),
-        base44.entities.CircuitBreaker.list(null, 20),
-        base44.entities.MetaMonitor.list("-created_date", 8),
+        safeList("ConnectedApp", null, 200),
+        safeList("HealingEventLog", "-created_date", 300),
+        safeList("PlaybookTemplate", null, 500),
+        safeList("PlatformAdapter", null, 20),
+        safeList("ComputeNode", null, 100),
+        safeList("AIAgent", null, 200),
+        safeList("PlatformAlert", "-created_date", 50),
+        safeList("CircuitBreaker", null, 20),
+        safeList("MetaMonitor", "-created_date", 8),
       ]);
       const failed = results.map((r, i) => (r.status === "rejected" ? i : -1)).filter((i) => i >= 0);
       if (!mounted) return;

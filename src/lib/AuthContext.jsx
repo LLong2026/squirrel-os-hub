@@ -10,21 +10,29 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     let mounted = true;
-    base44.auth
-      .me()
-      .then((u) => {
-        if (!mounted) return;
-        setUser(u);
+    try {
+      const me = base44?.auth?.me;
+      if (typeof me === "function") {
+        Promise.resolve(me.call(base44.auth))
+          .then((u) => {
+            if (!mounted) return;
+            setUser(u);
+            setLoading(false);
+          })
+          .catch((e) => {
+            if (!mounted) return;
+            const msg = String(e?.message || e || "").toLowerCase();
+            if (msg.includes("not registered") || msg.includes("usernotregistered") || msg.includes("no user")) {
+              setNotRegistered(true);
+            }
+            setLoading(false);
+          });
+      } else {
         setLoading(false);
-      })
-      .catch((e) => {
-        if (!mounted) return;
-        const msg = String(e?.message || e || "").toLowerCase();
-        if (msg.includes("not registered") || msg.includes("usernotregistered") || msg.includes("no user")) {
-          setNotRegistered(true);
-        }
-        setLoading(false);
-      });
+      }
+    } catch (e) {
+      if (mounted) setLoading(false);
+    }
     return () => {
       mounted = false;
     };
