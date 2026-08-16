@@ -159,3 +159,10 @@ Squirrel OS aligns with federal research priorities across:
 ---
 
 © 2026 Squirrel OS Technologies / Leon Calvin Long II. All Rights Reserved.
+
+---
+## Disclaimer
+
+This software is a prototype and is provided for educational and research purposes only.
+It is not intended for production use, commercial deployment, or safety-critical environments.
+All systems are experimental and may contain defects on them.
